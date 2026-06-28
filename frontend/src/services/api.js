@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+// In production (Vercel) the API is served from the same domain at /api
+// In development it proxies to localhost:8000 via vite.config.js
 const BASE = import.meta.env.VITE_API_URL || '/api';
 
 const api = axios.create({ baseURL: BASE });
