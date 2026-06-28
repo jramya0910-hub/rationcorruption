@@ -13,4 +13,8 @@ export default defineConfig({
       },
     },
   },
+  // Ensures React Router works on Vercel (SPA fallback)
+  build: {
+    outDir: 'dist',
+  },
 })
